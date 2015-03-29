@@ -1,0 +1,3 @@
+*.pyc
+/segmentation/.ipynb_checkpoints/*
+
