@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>10115</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN10115.wav</FileName>
+  <ClassId>tsxwwl</ClassId>
+  <OriginalFileName>Myrmeciza squamosa_Itajai-mirim_Presidente Nereu_SC_02-04-2009.mp3</OriginalFileName>
+  <Date>2009-04-02</Date>
+  <Time>?</Time>
+  <Locality>Itajaí-mirim, Parque Nacional da Serra do Itajaí, Presidente Nereu, Santa Catarina</Locality>
+  <Latitude>-27.247</Latitude>
+  <Longitude>-49.287</Longitude>
+  <Elevation>400</Elevation>
+  <Author>Adrian Eisen Rupp</Author>
+  <AuthorID>AOPMSCIDIA</AuthorID>
+  <Content>call</Content>
+  <Comments />
+  <Quality>1</Quality>
+  <BackgroundSpecies />
+  <Family>Thamnophilidae</Family>
+  <Genus>Myrmeciza</Genus>
+  <Species>squamosa</Species>
+  <Sub-species />
+  <VernacularNames>Squamate Antbird</VernacularNames>
+</Audio>

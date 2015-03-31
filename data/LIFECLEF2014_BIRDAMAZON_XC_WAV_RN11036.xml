@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>11036</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN11036.wav</FileName>
+  <ClassId>tovyzm</ClassId>
+  <OriginalFileName>Spizaetus_tyrannus_BPR_LA_05_VIII_2008.mp3</OriginalFileName>
+  <Date>2008-08-05</Date>
+  <Time>?</Time>
+  <Locality>Braço Paula Ramos, between Luiz Alves and Massaranduba, Santa Catarina</Locality>
+  <Latitude>-26.7556</Latitude>
+  <Longitude>-49.0237</Longitude>
+  <Elevation>330</Elevation>
+  <Author>Adrian Eisen Rupp</Author>
+  <AuthorID>AOPMSCIDIA</AuthorID>
+  <Content>song</Content>
+  <Comments>bird in flight</Comments>
+  <Quality>1</Quality>
+  <BackgroundSpecies />
+  <Family>Accipitridae</Family>
+  <Genus>Spizaetus</Genus>
+  <Species>tyrannus</Species>
+  <Sub-species />
+  <VernacularNames>Black Hawk-Eagle</VernacularNames>
+</Audio>

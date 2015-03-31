@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>100</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN100.wav</FileName>
+  <ClassId>fupfmw</ClassId>
+  <OriginalFileName>XC119511-Hylophilax punctulatus_Itaituba_1164.MP3</OriginalFileName>
+  <Date>2011-07-22</Date>
+  <Time>09:00</Time>
+  <Locality>Trairão, Para</Locality>
+  <Latitude>-5.3316</Latitude>
+  <Longitude>-56.0715</Longitude>
+  <Elevation>110</Elevation>
+  <Author>GABRIEL LEITE</Author>
+  <AuthorID>TGBFXDVERJ</AuthorID>
+  <Content>female, male, song</Content>
+  <Comments>, , bird-seen:yes, , playback-used:yes</Comments>
+  <Quality>2</Quality>
+  <BackgroundSpecies>Tyranneutes stolzmanni</BackgroundSpecies>
+  <Family>Thamnophilidae</Family>
+  <Genus>Hylophylax</Genus>
+  <Species>punctulatus</Species>
+  <Sub-species />
+  <VernacularNames>Dot-backed Antbird</VernacularNames>
+</Audio>
