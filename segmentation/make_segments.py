@@ -11,9 +11,13 @@ from segmentation import simple_segmentation
 
 
 # list with all wav files in date directory (i.e. examples)
-example_paths = glob.glob("../data/LIFECLEF2014_BIRDAMAZON_XC_WAV_RN*.wav")
+example_wav_paths = glob.glob("../data/raw_wav_files/LIFECLEF2014_BIRDAMAZON_XC_WAV_RN*.wav")
+# default path for example segments
+example_seg_paths = "../data/segment_results"
 
-def process_wav_files(wav_file_paths = example_paths , output_dir = "", savefig = False):
+def process_wav_files(wav_file_paths = example_wav_paths ,
+                      output_dir = example_seg_paths,
+                      savefig = False):
 
     for wav_file_path in wav_file_paths:
 
