@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>11290</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN11290.wav</FileName>
+  <ClassId>lssubf</ClassId>
+  <OriginalFileName>Drymophila ferruginea PNMCC Marcos Melo.mp3</OriginalFileName>
+  <Date>2009-05-02</Date>
+  <Time>08:45</Time>
+  <Locality>Parque Natural Municipal da Cratera da Colonia, São Paulo - SP</Locality>
+  <Latitude>-23.874</Latitude>
+  <Longitude>-46.708</Longitude>
+  <Elevation>760</Elevation>
+  <Author>Marcos Melo</Author>
+  <AuthorID>MRGDYNJGUJ</AuthorID>
+  <Content>song</Content>
+  <Comments>used playback</Comments>
+  <Quality>1</Quality>
+  <BackgroundSpecies>Drymophila malura</BackgroundSpecies>
+  <Family>Thamnophilidae</Family>
+  <Genus>Drymophila</Genus>
+  <Species>ferruginea</Species>
+  <Sub-species />
+  <VernacularNames>Ferruginous Antbird</VernacularNames>
+</Audio>

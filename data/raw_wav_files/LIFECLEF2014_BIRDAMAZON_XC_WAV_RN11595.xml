@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Audio>
+  <MediaId>11595</MediaId>
+  <FileName>LIFECLEF2014_BIRDAMAZON_XC_WAV_RN11595.wav</FileName>
+  <ClassId>fmdsaj</ClassId>
+  <OriginalFileName>PIPCHL19.mp3</OriginalFileName>
+  <Date>2002-07-23</Date>
+  <Time>08:34</Time>
+  <Locality>Boa Nova, Wet Forest, state of Bahia</Locality>
+  <Latitude>-14.3834</Latitude>
+  <Longitude>-40.1001</Longitude>
+  <Elevation>825</Elevation>
+  <Author>Jeremy Minns</Author>
+  <AuthorID>DGVLLRYDXS</AuthorID>
+  <Content>Song</Content>
+  <Comments>Humid forest.</Comments>
+  <Quality>2</Quality>
+  <BackgroundSpecies>Ramphastos vitellinus,Contopus cinereus</BackgroundSpecies>
+  <Family>Tyrannidae</Family>
+  <Genus>Piprites</Genus>
+  <Species>chloris</Species>
+  <Sub-species>chloris</Sub-species>
+  <VernacularNames>Wing-barred Piprites</VernacularNames>
+</Audio>
