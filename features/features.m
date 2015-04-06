@@ -23,7 +23,7 @@ for i = 1:length(wavfiles)
     
     nombre_fichero = strcat('features_',nombre_sin_csv,'.csv'); %nombre del fichero
 
-    fileID = fopen(['/Users/yael/Desktop/pajaros/data/features/',nombre_fichero],'w'); %abro el fichero en el que escribo
+    fileID = fopen(['../data/features/',nombre_fichero],'w'); %abro el fichero en el que escribo
     
     for n = 1:num_segmentos %recorro cada semento
         
@@ -37,13 +37,13 @@ for i = 1:length(wavfiles)
         [cepstra]=melfcc(selected_segment, sr); %aplico melfcc al segmetno
         
         %calculo medias
-        media_cepstra = mean(cepstra'); %13 elementos uno por cada mfcc
-        var_cepstra = var(cepstra'); %13 elementos uno por cada mfcc
+        media_cepstra = mean(cepstra'); %16 elementos uno por cada mfcc
+        var_cepstra = var(cepstra'); %16 elementos uno por cada mfcc
         
         %media_cepstra_final(n,:) = media_cepstra;
         %var_cepstra_final(n,:) = var_cepstra;
        
-        fprintf(fileID,'%s %s %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %5d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d \n',nombre_sin_csv, inicio, fin, media_cepstra, var_cepstra)
+        fprintf(fileID,'%s %s %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d \n',nombre_sin_csv, inicio, fin, media_cepstra, var_cepstra)
         
     end   
    
