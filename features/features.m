@@ -1,11 +1,11 @@
 %import library for mfcc calculations
-addpath('/Users/yael/Desktop/pajaros/rastamat')
+addpath('../rastamat')
 
 %directorios en los que están los wav y los csv de cada segmento
 
 clear
-wavfiles = dir('/Users/yael/Desktop/pajaros/data/raw_wav_files/*.wav'); %directory wavefiles
-csv = dir('/Users/yael/Desktop/pajaros/data/segment_results/*.csv'); % directory segment csv
+wavfiles = dir('../data/raw_wav_files/*.wav'); %directory wavefiles
+csv = dir('../data/segment_results/*.csv'); % directory segment csv
 
 for i = 1:length(wavfiles)
     
@@ -13,10 +13,10 @@ for i = 1:length(wavfiles)
     csv(i).name
     
     % leo el wav: valores y smaple rate
-    [d,sr]=wavread(['/Users/yael/Desktop/pajaros/data/raw_wav_files/',wavfiles(i).name]);
+    [d,sr]=wavread(['../data/raw_wav_files/',wavfiles(i).name]);
     
     nombre_sin_csv = regexprep(csv(i).name,'.csv','');
-    RN_csv = load (['/Users/yael/Desktop/pajaros/data/segment_results/',csv(i).name]); %leo el csv
+    RN_csv = load (['../data/segment_results/',csv(i).name]); %leo el csv
     num_segmentos = length(RN_csv(:,1)); %numero de segmentos = numero de filas del csv
     
     
