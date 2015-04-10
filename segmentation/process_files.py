@@ -32,6 +32,9 @@ def process_wav_files(wav_file_paths = example_wav_paths ,
 
         # read attributes from xml
         mediaID, classID = xml_attributes(wav_file_path.replace('.wav','.xml'))
+
+        # prompt current file
+        print "Processing file {0} of class {1}".format(mediaID, classID)
  
         # add title and labels to plot
         ax.set_title(" MediaID: {0} ClassID: {1} ".format(mediaID, classID))
@@ -55,14 +58,12 @@ def process_wav_files(wav_file_paths = example_wav_paths ,
 def xml_attributes(xml_file_path):
 
     xml_tree = ET.parse(xml_file_path)
+    
     mediaID = xml_tree.getroot().find('MediaId').text
-    classID = xml_tree.getroot().find('ClassId').text
+    classID = xml_tree.getroot().find('ClassId')
+    if classID:
+        classID = classID.text
+    else:
+        classID = "unknown"
 
     return mediaID, classID
-
-
-
-process_wav_files()
-
-
-
