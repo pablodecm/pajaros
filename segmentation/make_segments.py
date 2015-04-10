@@ -1,68 +1,30 @@
 #! /bin/python2
 
-import glob
-import os.path
-import xml.etree.ElementTree as ET
-import numpy as np
-from scipy.io import wavfile
-from scipy.signal import decimate
+import argparse
+from process_files import process_wav_files
+import pickle
 
-from segmentation import simple_segmentation
+parser = argparse.ArgumentParser(description='Get segments from wav files.')
+parser.add_argument('-fl','--file_list', required=True,
+                    help='Path to a pickle file with a list files')
+parser.add_argument('-o','--output_path',required=True,
+                    help='Path to desired output folder')
+parser.add_argument('-fr','--fr', type=int,
+                    help='Range of files in the list to process')
+parser.add_argument('-to','--to', type=int,
+                    help='Range of files in the list to process')
 
+args = parser.parse_args()
 
-# list with all wav files in date directory (i.e. examples)
-example_wav_paths = glob.glob("../data/raw_wav_files/LIFECLEF2014_BIRDAMAZON_XC_WAV_RN*.wav")
-# default path for example segments
-example_seg_paths = "../data/segment_results"
+# load file list from file
+with open(args.file_list) as f:
+    wav_file_list = pickle.load(f)
 
-def process_wav_files(wav_file_paths = example_wav_paths ,
-                      output_dir = example_seg_paths,
-                      savefig = False):
+# process files
+process_wav_files(wav_file_list[args.fr : args.to], args.output_path)
 
-    for wav_file_path in wav_file_paths:
-
-        # import data and down sample
-        raw_sample_rate, raw_wav_data = wavfile.read( wav_file_path )
-        downsample_factor = 4
-        wav_data = decimate(raw_wav_data, downsample_factor)
-        sample_rate = raw_sample_rate/downsample_factor
-
-        # segment data (obtain segments and figure)
-        segments, f, ax = simple_segmentation(wav_data, sample_rate)
-
-        # read attributes from xml
-        mediaID, classID = xml_attributes(wav_file_path.replace('.wav','.xml'))
- 
-        # add title and labels to plot
-        ax.set_title(" MediaID: {0} ClassID: {1} ".format(mediaID, classID))
-        ax.set_xlabel("Time (seconds)")
-        ax.set_ylabel("Frequency (Hz)")
-
-        basename = os.path.basename(wav_file_path.replace('.wav',''))
-
-        if savefig:
-            # save figure to output dir
-            f.savefig(os.path.join(output_dir, basename+".pdf"))
-        
-        # save segments to csv
-        np.savetxt(os.path.join(output_dir, basename+".csv"),
-                   segments, delimiter = ",", fmt = '%3.4f')
-
-    return None
-        
-
-
-def xml_attributes(xml_file_path):
-
-    xml_tree = ET.parse(xml_file_path)
-    mediaID = xml_tree.getroot().find('MediaId').text
-    classID = xml_tree.getroot().find('ClassId').text
-
-    return mediaID, classID
-
-
-
-process_wav_files()
+# notify that processing has finished
+print "Process has finished!"
 
 
 
