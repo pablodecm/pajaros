@@ -43,7 +43,9 @@ for i = 1:length(wavfiles)
         %media_cepstra_final(n,:) = media_cepstra;
         %var_cepstra_final(n,:) = var_cepstra;
        
-        fprintf(fileID,'%s %s %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d \n',nombre_sin_csv, inicio, fin, media_cepstra, var_cepstra)
+        fprintf(fileID,'%s %s %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d %3d  %s\n',nombre_sin_csv, inicio, fin, media_cepstra, var_cepstra)
+        fprintf(fileID,'\n');
+        
         
     end   
    
