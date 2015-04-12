@@ -11,6 +11,8 @@ def find_syllables(spectogram, time_array, db_diff ):
     max_value = max_db_array[max_index]
     # min value of maxima to be considered a syllabe
     min_syllabe = max_value - db_diff
+    if min_syllabe < 0:
+        min_syllabe = 1.0e-4 # avoid endless loops 
 
     interval_list = [] # empty list to hold syllabe intervals
 
@@ -45,7 +47,10 @@ def find_syllables(spectogram, time_array, db_diff ):
         max_db_array[interval[0]:interval[1]+1] = 0
    
     # change from bin indexes to time 
-    syllables = time_array[np.array(interval_list)]
+    if len(interval_list) > 0:
+        syllables = time_array[np.array(interval_list)]
+    else: # no syllables found
+        syllables = np.array(interval_list)
 
     return syllables 
 
