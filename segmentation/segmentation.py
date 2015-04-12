@@ -27,7 +27,10 @@ def simple_segmentation( wav_data, sample_rate, db_diff = 17, max_silence = 0.8 
 
     syllables = find_syllables(spectogram, time_array, db_diff)
 
-    segments = join_in_segments(syllables, max_silence) 
+    if len(syllables) > 1:
+        segments = join_in_segments(syllables, max_silence) 
+    else:
+        segments = syllables
 
     # add segments to plot as red shadowed areas
     hspans = []

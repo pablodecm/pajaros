@@ -6,6 +6,9 @@ import xml.etree.ElementTree as ET
 import numpy as np
 from scipy.io import wavfile
 from scipy.signal import decimate
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
 
 from segmentation import simple_segmentation
 
@@ -51,6 +54,11 @@ def process_wav_files(wav_file_paths = example_wav_paths ,
         np.savetxt(os.path.join(output_dir, basename+".csv"),
                    segments, delimiter = ",", fmt = '%3.4f')
 
+        # close figure so it can be garbaged
+        f.clf()
+        plt.clf()
+        plt.close('all')
+
     return None
         
 
@@ -61,7 +69,7 @@ def xml_attributes(xml_file_path):
     
     mediaID = xml_tree.getroot().find('MediaId').text
     classID = xml_tree.getroot().find('ClassId')
-    if classID:
+    if classID is not None:
         classID = classID.text
     else:
         classID = "unknown"
