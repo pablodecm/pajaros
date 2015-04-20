@@ -1,0 +1,10 @@
+#!/bin/bash
+#@ job_name = train_rsnns9
+#@ initialdir = .
+#@ output = train_rsnns9_%j.out
+#@ error = train_rsnns9_%j.err
+#@ total_tasks = 1
+#@ cpus_per_task = 1
+#@ wall_clock_limit = 24:00:00
+
+R-3.1.3/bin/Rscript train_rsnns9.R

@@ -1,0 +1,11 @@
+#!/bin/bash
+#@ job_name = train_nn
+#@ initialdir = .
+#@ output = train_nn_%j.out
+#@ error = train_nn_%j.err
+#@ total_tasks = 1
+#@ cpus_per_task = 1
+#@ wall_clock_limit = 24:00:00
+
+module load MATLAB
+matlab -nodisplay -nosplash -r "train_nn"
